@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	
+	<bean class="com.xoriant.beans.District" id="district" autowire-candidate="true">
+		<property name="districtName" value="Pune"></property>
+	</bean>
+	
+	<bean class="com.xoriant.beans.District" id="district1" autowire-candidate="false">
+		<property name="districtName" value="Nasik"></property>
+	</bean>
+	
+	<bean class="com.xoriant.beans.State" id="state" autowire="byType">
+		<property name="stateName" value="Maharashtra"></property>
+	</bean>
+
+	<bean class="com.xoriant.beans.Country" id="country" autowire="constructor">
+		<constructor-arg name="countryName" value="India"></constructor-arg>
+	</bean>
+</beans>

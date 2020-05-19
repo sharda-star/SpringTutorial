@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<bean class="com.xoriant.beans.Person" id="person">
+		<property name="name" value="Nisha"></property>
+		<property name="age" value="39"></property>
+		<property name="address" ref="address1"></property>
+	</bean>
+	
+	<bean class="com.xoriant.beans.Person" id="person1">
+		<property name="name" value="Ramlal"></property>
+		<property name="age" value="30"></property>
+		<property name="address" ref="address" ></property>
+	</bean>
+	
+	<bean class="com.xoriant.beans.Address" id="address">
+		<property name="city" value="Pune"></property>
+	</bean>
+	<bean class="com.xoriant.beans.Address" id="address1">
+		<property name="city" value="Mumbai"></property>
+	</bean>
+</beans>

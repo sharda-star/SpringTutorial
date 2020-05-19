@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<bean class="com.xoriant.beans.Address" id="address">
+		<constructor-arg name="city" value="Pune"></constructor-arg>
+		<constructor-arg name="pincode" value="411041"></constructor-arg>
+	</bean>
+
+	<bean class="com.xoriant.beans.Customer" id="customer">
+		<constructor-arg name="custId" value="101"></constructor-arg>
+		<constructor-arg name="name" value="Ramlal"></constructor-arg>
+		<constructor-arg name="address" ref="address"></constructor-arg>
+	</bean>
+</beans>
